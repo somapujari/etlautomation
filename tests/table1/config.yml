@@ -1,0 +1,33 @@
+source:
+  path : 'abfss://raw@augauto.dfs.core.windows.net/taxi_zone_lookup.csv'
+  type: 'csv'
+  schema: 'N'
+  options:
+    header: "NA"
+    delimeter: "NA"
+target:
+  type: "database"
+  transformation_sql: 'NA'
+  table: "TAXI_ZONE.QA.TRIP_LOOKUP_RAW"
+  cred_lookup: 'snowflake'
+
+validations:
+  count_check:
+    key_columns: ['LocationID']
+  duplicate_check:
+    key_columns: ['LocationID']
+  null_check:
+    null_columns: ['LocationID']
+  uniqueness_check:
+    unique_columns: ['LocationID']
+  data_completeness_check :
+    key_columns : ['LocationID']
+test_cases:
+  record_only_in_source:
+    enabled: 'Y'
+    key_columns: ['LocationID']
+  record_only_in_target:
+    enabled: 'Y'
+    key_columns: ['LocationID']
+  schema_check:
+    enabled: 'Y'
