@@ -1,3 +1,10 @@
+import subprocess
+import sys
+
+# Automatically install pytest if not present
+subprocess.check_call([sys.executable, "-m", "pip", "install", "pytest"])
+
+
 import argparse
 import pytest
 
