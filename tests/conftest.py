@@ -48,7 +48,7 @@ def spark_session(request):
 
     adls_account_name = 'augauto'
     adls_container_name = 'raw'
-    key = "HPYHx8Hxr3w4ZTiWoPepySyjRaybQqI1iUoPbhsjtWDsUrnWjs8hHF8djdQfk9sjuBjfEB+OU1L/+AStSoaDSg=="
+    key = "8Qtx7EgdUQ9JSWkmNWNgwdyMFQamCOIrE0fxBgGkvJNJG/1+3UjYw1w+ZcK3Qmf+7Q0vEMUxqVfQ+AStaut73Q=="
     spark.conf.set(f"fs.azure.account.auth.type.{adls_account_name}.dfs.core.windows.net","SharedKey")
     spark.conf.set(f"fs.azure.account.key.{adls_account_name}.dfs.core.windows.net", key)
     return spark
