@@ -12,7 +12,7 @@ spark = SparkSession.builder.appName("ADLS_Skip_Processed_Files").getOrCreate()
 # ADLS account details (move secrets to Azure Key Vault or Databricks Secrets in production)
 adls_account_name = "augauto"
 adls_container_name = "raw"
-key = "HPYHx8Hxr3w4ZTiWoPepySyjRaybQqI1iUoPbhsjtWDsUrnWjs8hHF8djdQfk9sjuBjfEB+OU1L/+AStSoaDSg=="
+key = "lxuJga6SIu6kjw/dMgprc8ufV5+9cYWoR88MtbPPD0bxElAJD3z/eeHCjpJHjIOBMmHO5ddMS0TP+AStU2zBdA=="
 
 # Set Spark configs for ADLS Gen2
 spark.conf.set(f"fs.azure.account.auth.type.{adls_account_name}.dfs.core.windows.net", "SharedKey")
